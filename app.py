@@ -21,7 +21,7 @@ from rwkv.model import RWKV
 dir_path = os.path.dirname(os.path.realpath(__file__))
 model_path = os.path.join(dir_path, 'models','RWKV-4-Pile-7B-EngChn-testNovel-done-ctx2048-20230317')
 #model_path = "D:/chatRWKV/ChatRWKV/models/RWKV-4-Pile-7B-EngChn-testNovel-done-ctx2048-20230317"
-model = RWKV(model=model_path, strategy='cuda fp16i8')
+model = RWKV(model=model_path, strategy='cuda fp16i8 *20+')
 from rwkv.utils import PIPELINE, PIPELINE_ARGS
 relative_path = os.path.join(dir_path, 'v2', '20B_tokenizer.json')
 pipeline = PIPELINE(model, relative_path)
